@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import NavBar from "./components/Navbar";
-// import { Container } from '@mui/material'
+import UserList from './components/UserList';
 export default function App() {
   return (
 
@@ -13,9 +13,10 @@ export default function App() {
     <NavBar/>
       <Container>
         <Routes>
-          <Route path='/' element={<User />} />
+          <Route path='/' element={<UserList />} />
+          <Route path='/usuario/new' element={<User />} />
           {/* <Route path='/task/new' element={<TaskForms />} /> */}
-          {/* <Route path='/task/:id/edit' element={<TaskForms />} /> */}
+          <Route path='/usuario/:id/edit' element={<User />} />
         </Routes>
       </Container>
     </BrowserRouter>
